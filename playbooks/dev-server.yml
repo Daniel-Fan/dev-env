@@ -7,7 +7,7 @@
 
 - name: Setup servers
   hosts: dev
-  sudo: yes
+  become: yes
   tags: servers
   roles:
     - { role: thirdparty/nosql/mongod,

@@ -1,7 +1,7 @@
 ---
 - name: rvm | install packages needed
   tags: rvm
-  sudo: yes
+  become: yes
   yum: pkg={{item}} state=present
   with_items:
     - patch
@@ -23,7 +23,7 @@
 
 - name: rvm | install packages needed for gems
   tags: rvm, rmv-gems
-  sudo: yes
+  become: yes
   yum: pkg={{item}} state=present
   with_items:
       - libvirt-devel

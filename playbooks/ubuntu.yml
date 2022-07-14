@@ -7,7 +7,7 @@
 
 - name: Setup VM essential
   hosts: dev:&Ubuntu
-  sudo: yes
+  become: yes
   tags: install
   roles:
       - distro/ubuntu/essentials

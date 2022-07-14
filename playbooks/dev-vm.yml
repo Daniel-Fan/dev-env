@@ -7,21 +7,21 @@
 
 - name: Setup VM essential
   hosts: dev:&Ubuntu
-  sudo: yes
+  become: yes
   tags: essentials
   roles:
       - distro/ubuntu/essentials
 
 - name: Setup VM essential
   hosts: dev:&Fedora
-  sudo: yes
+  become: yes
   tags: essentials
   roles:
       - distro/fedora/essentials
 
 - name: Setup developer home
   hosts: dev
-  sudo: no
+  become: no
   tags: dev-env
   roles:
     - dev/env

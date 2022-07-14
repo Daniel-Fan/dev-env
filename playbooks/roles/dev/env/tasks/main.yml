@@ -3,7 +3,7 @@
 - include: fonts.yml
 - include: tmux.yml
 - include: zsh.yml
-- include: rbenv.yml
+# - include: rbenv.yml
 - include: nvm.yml
 - include: fasd.yml
 - include: vim.yml

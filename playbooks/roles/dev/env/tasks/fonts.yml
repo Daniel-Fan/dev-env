@@ -1,7 +1,7 @@
 ---
 - name: fonts | ensure there is fontconfig
   tags: fonts
-  sudo: yes
+  become: yes
   yum:  pkg={{item}} state=present
   with_items:
       - fontconfig

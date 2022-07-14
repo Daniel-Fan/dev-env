@@ -9,7 +9,7 @@
 
 - name: rbenv | fedora | install required libs
   tags: ruby
-  sudo: yes
+  become: yes
   yum: pkg={{item}} state=present
   with_items:
     - openssl-devel
@@ -17,7 +17,7 @@
 
 - name: rbenv | ubuntu | install required libs
   tags: ruby
-  sudo: yes
+  become: yes
   apt: pkg={{item}} state=present
   with_items:
     - libssl-dev

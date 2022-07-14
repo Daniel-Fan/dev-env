@@ -1,4 +1,4 @@
-# git clone origingit://github.com/robbyrussell/oh-my-zsh.git .omz
+# git clone origingit@github.com:robbyrussell/oh-my-zsh.git .omz
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/Dropbox/Private/Linux/dot-files/oh-my-zsh
