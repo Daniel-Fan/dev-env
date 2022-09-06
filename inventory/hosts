@@ -2,8 +2,8 @@
 localhost ansible_connection=local
 
 ### Add vm settings here ###
-washier ansible_ssh_host=10.21.1.13 ansible_ssh_user=root ansible_sudo_pass=Letmein123!
+<name-of-vm> ansible_ssh_host=<host-ip-address> ansible_ssh_user=<shh-user> ansible_sudo_pass=<password>
 
 ### Add VM to dev group
 [dev]
-washier
+<name-of-vm>
