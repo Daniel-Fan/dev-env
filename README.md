@@ -6,7 +6,9 @@
 Reference: https://code.visualstudio.com/docs/remote/troubleshooting#_quick-start-using-ssh-keys
 
 #### 1. Create your local SSH key pair
-**NOTE** Check to see if you already have an SSH key on your local machine. This is typically located at `~/.ssh/id_ed25519.pub` on macOS / Linux, and the .ssh directory in your user profile folder on Windows (for example `C:\Users\your-user\.ssh\id_ed25519.pub`).
+**NOTE:** Check to see if you already have an SSH key on your local machine.
+
+This is typically located at `~/.ssh/id_ed25519.pub` on macOS / Linux, and the `.ssh` directory in your user profile folder on Windows (for example `C:\Users\your-user\.ssh\id_ed25519.pub`).
 
 If you do not have a key, run the following command in a local terminal / PowerShell to generate an SSH key pair:
 
@@ -85,5 +87,5 @@ Open `inventory/hosts` file to fill up with host information
 - Run the playbook as below
 
 ```
-ansible-playbook -K playbooks/dev-vm.yml
+ansible-playbook -i inventory/hosts -K playbooks/dev-vm.yml
 ```

@@ -26,9 +26,25 @@
   copy: src={{item.file}} dest={{item.dest}}
   with_items:
       - { file: 'zsh/zshrc', dest: '~/.zshrc' }
-      - { file: 'zsh/neil.zsh-theme', dest: '{{zsh.dest}}/themes/' }
+      # - { file: 'zsh/neil.zsh-theme', dest: '{{zsh.dest}}/themes/' }
 
 - name: zsh | set ~z dir
   tags: zsh
   lineinfile: dest=~/.zshrc regexp=^ZSH= line=ZSH="{{zsh.dest}}"
 
+- name: zsh | set zsh as default shell
+  ansible.builtin.shell: chsh -s $(which zsh)
+
+- name: zsh | set zsh shell for VS Code SSH Remote
+  blockinfile:
+    dest: ~/.bashrc
+    insertbefore: BOF
+    block: |
+      if [[ "$TERM_PROGRAM" == "vscode" ]]; then
+        # ~/.profile is run by the login shell (this is what ssh uses)
+        # ~/.bashrc is run by the interactive shell (this is what vscode uses)
+        # Therefore, we only need to change the shell to zsh here since
+        # vscode will run ~/.bashrc for us.
+        exec zsh -l
+      fi
+    backup: yes

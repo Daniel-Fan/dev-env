@@ -19,10 +19,13 @@
     - zsh
     - tmux
     - htop
+    - golang-go
+    - docker.io
+    - gcc
 
-- name: remove unwanted packages
-  apt: pkg={{item}} state=absent
-  with_items:
-      - unity-lens-friends
-      - unity-lens-music
-      - unity-lens-files
+# - name: remove unwanted packages
+#   apt: pkg={{item}} state=absent
+#   with_items:
+#       - unity-lens-friends
+#       - unity-lens-music
+#       - unity-lens-files

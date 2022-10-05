@@ -20,3 +20,5 @@
     - zsh
     - tmux
     - htop
+    - golang-go
+    - docker

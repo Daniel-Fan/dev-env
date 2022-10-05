@@ -1,29 +1,29 @@
 
 zsh:
-  repo: git@github.com:robbyrussell/oh-my-zsh.git
+  repo: https://github.com/ohmyzsh/ohmyzsh.git
   dest: ~/.omz
 
   syntax_highlighting:
-    repo: git@github.com:zsh-users/zsh-syntax-highlighting.git
+    repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
     # dest: should go in the zsh.repo/custom/plugins
     #        ~/.rbenv/plugins/ruby-build
 
-fasd:
-  repo: git@github.com:clvv/fasd.git
-  dest: ~/Developer/Tools/shell/fasd/src
+# fasd:
+#   repo: git@github.com:clvv/fasd.git
+#   dest: ~/Developer/Tools/shell/fasd/src
 
-rbenv:
-  repo: git@github.com:rbenv/rbenv.git
-  dest: ~/.rbenv
+# rbenv:
+#   repo: git@github.com:rbenv/rbenv.git
+#   dest: ~/.rbenv
 
-  ruby_build:
-    repo: git@github.com:rbenv/ruby-build.git
-    # dest: should go in the rbenv.dest/plugins/ruby-build
-    #        ~/.rbenv/plugins/ruby-build
+#   ruby_build:
+#     repo: git@github.com:rbenv/ruby-build.git
+#     # dest: should go in the rbenv.dest/plugins/ruby-build
+#     #        ~/.rbenv/plugins/ruby-build
 
-nvm:
-  repo: git@github.com:creationix/nvm.git
-  dest: ~/.nvm
+# nvm:
+#   repo: git@github.com:creationix/nvm.git
+#   dest: ~/.nvm
 
 vim:
   required:

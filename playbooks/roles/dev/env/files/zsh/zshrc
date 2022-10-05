@@ -1,15 +1,15 @@
 # git clone origingit@github.com:robbyrussell/oh-my-zsh.git .omz
 
 # Path to your oh-my-zsh configuration.
-ZSH=$HOME/Dropbox/Private/Linux/dot-files/oh-my-zsh
-#ZSH=$HOME/.omz
+# ZSH=$HOME/Dropbox/Private/Linux/dot-files/oh-my-zsh
+export ZSH="$HOME/.omz"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="random"
-ZSH_THEME="neil"
+ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -59,7 +59,7 @@ HIST_STAMPS="dd/mm/yyyy"
 # plugins=(fasd alert rvm vagrant nvm colorize history history-substring-search virtualenv zsh-syntax-highlighting)
 
 plugins=(
-    fasd alert colored-man beautiless
+    fasd
     vagrant nvm colorize
     history history-substring-search
     virtualenv
@@ -72,6 +72,9 @@ hash -d z=$ZSH
 # User configuration
 # ZSH_HIGHLIGHT_STYLES[path]='fg=114'
 # ZSH_HIGHLIGHT_STYLES[precommand]='fg=160'
+_path_prepend() {
+  [ -d "$1" ] && export PATH="$1:$PATH"
+}
 
 _path_prepend /usr/local/bin
 [[ -d ~/.local/bin ]] && _path_prepend  "$HOME/.local/bin"
