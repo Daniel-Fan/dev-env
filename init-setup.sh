@@ -10,4 +10,4 @@ python3 -m pip -V
 python3 -m pip install --user ansible
 
 # add ansible to PATH
-export PATH="$PATH:~/.local/bin"
+echo PATH="~/.local/bin:$PATH" >> ~/.bashrc

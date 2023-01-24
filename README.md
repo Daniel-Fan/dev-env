@@ -71,7 +71,7 @@ Run one of the following commands, replacing `user` and `hostname` as appropriat
 
 3. Run the initial setup script to install `pip` and `ansible` under the `dev-env` folder
     ```
-    sudo init-setup.sh
+    sudo ./init-setup.sh
     ```
 
 ### Fill up the host file

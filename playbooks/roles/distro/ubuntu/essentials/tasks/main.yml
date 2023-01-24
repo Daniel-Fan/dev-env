@@ -22,6 +22,8 @@
     - golang-go
     - docker.io
     - gcc
+    - npm
+    - nodejs
 
 # - name: remove unwanted packages
 #   apt: pkg={{item}} state=absent
