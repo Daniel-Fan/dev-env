@@ -85,7 +85,7 @@ Open `inventory/hosts` file to fill up with host information
 
 ### Run the ansible playbook
 - Run the playbook as below
-
+> NOTE: If `ansible-playbook` command is not found, please restart the terminal to add `ansible-playbook` into `PATH`.
 ```
 ansible-playbook -i inventory/hosts -K playbooks/dev-vm.yml
 ```
